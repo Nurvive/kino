@@ -16,6 +16,7 @@ export const KinoList = () => {
                         title={card.title}
                         description={card.description}
                         imgSrc={card.imgSrc}
+                        filmId={card.filmId}
                         genre={card.genre}
                     />
                 ))}

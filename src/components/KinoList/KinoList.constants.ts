@@ -7,6 +7,7 @@ export const DEFAULT_CARDS = [
         description: 'There are growing dangers in the wizarding world of 1926 New York and assassins',
         genre: ['Экшен', 'Фантастика', 'Приключения'],
         imgSrc: img,
+        filmId: 1,
     },
     {
         title: 'Assassin’s Creed',
@@ -14,6 +15,7 @@ export const DEFAULT_CARDS = [
         description: 'There are growing dangers in the wizarding world of 1926 New York and assassins',
         genre: ['Экшен', 'Фантастика', 'Приключения'],
         imgSrc: img,
+        filmId: 1,
     },
     {
         title: 'Assassin’s Creed',
@@ -21,6 +23,7 @@ export const DEFAULT_CARDS = [
         description: 'There are growing dangers in the wizarding world of 1926 New York and assassins',
         genre: ['Экшен', 'Фантастика', 'Приключения'],
         imgSrc: img,
+        filmId: 1,
     },
     {
         title: 'Assassin’s Creed',
@@ -28,6 +31,7 @@ export const DEFAULT_CARDS = [
         description: 'There are growing dangers in the wizarding world of 1926 New York and assassins',
         genre: ['Экшен', 'Фантастика', 'Приключения'],
         imgSrc: img,
+        filmId: 1,
     },
     {
         title: 'Assassin’s Creed',
@@ -35,6 +39,7 @@ export const DEFAULT_CARDS = [
         description: 'There are growing dangers in the wizarding world of 1926 New York and assassins',
         genre: ['Экшен', 'Фантастика', 'Приключения'],
         imgSrc: img,
+        filmId: 1,
     },
     {
         title: 'Assassin’s Creed',
@@ -42,6 +47,7 @@ export const DEFAULT_CARDS = [
         description: 'There are growing dangers in the wizarding world of 1926 New York and assassins',
         genre: ['Экшен', 'Фантастика', 'Приключения'],
         imgSrc: img,
+        filmId: 1,
     },
     {
         title: 'Assassin’s Creed',
@@ -49,6 +55,7 @@ export const DEFAULT_CARDS = [
         description: 'There are growing dangers in the wizarding world of 1926 New York and assassins',
         genre: ['Экшен', 'Фантастика', 'Приключения'],
         imgSrc: img,
+        filmId: 1,
     },
     {
         title: 'Assassin’s Creed',
@@ -56,6 +63,7 @@ export const DEFAULT_CARDS = [
         description: 'There are growing dangers in the wizarding world of 1926 New York and assassins',
         genre: ['Экшен', 'Фантастика', 'Приключения'],
         imgSrc: img,
+        filmId: 1,
     },
     {
         title: 'Assassin’s Creed',
@@ -63,6 +71,7 @@ export const DEFAULT_CARDS = [
         description: 'There are growing dangers in the wizarding world of 1926 New York and assassins',
         genre: ['Экшен', 'Фантастика', 'Приключения'],
         imgSrc: img,
+        filmId: 1,
     },
     {
         title: 'Assassin’s Creed',
@@ -70,5 +79,6 @@ export const DEFAULT_CARDS = [
         description: 'There are growing dangers in the wizarding world of 1926 New York and assassins',
         genre: ['Экшен', 'Фантастика', 'Приключения'],
         imgSrc: img,
+        filmId: 1,
     },
 ];

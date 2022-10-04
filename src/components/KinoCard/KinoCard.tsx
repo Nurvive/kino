@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
+    CloseButtonStyled,
     ContentStyled,
+    DescriptionStyled,
     GenreStyled,
+    HiddenContentStyled,
+    HiddenTitleStyled,
+    HiddenTopStyled,
     ImgWrapper,
     InfoWrapper,
     ItemStyled,
@@ -10,14 +15,25 @@ import {
     TitleStyled,
 } from './KinoCard.style';
 import { KinoCardProps } from './KinoCard.types';
+import { CustomLink } from '../CustomLink';
+import { Link } from 'react-router-dom';
+import { FavoriteButton } from '../FavoriteButton';
 
-export const KinoCard = ({ title, genre, imgSrc, rating, description }: KinoCardProps) => {
+export const KinoCard = ({ title, genre, imgSrc, rating, description, filmId }: KinoCardProps) => {
+    const [isShowInfo, setIsShowInfo] = useState(false);
+
+    const handleTransitionClick = () => {
+        setIsShowInfo((prevState) => !prevState);
+    };
+
     return (
         <KinoCardStyled>
-            <ImgWrapper imgSrc={imgSrc} />
+            <ImgWrapper onClick={handleTransitionClick} imgSrc={imgSrc} />
             <ContentStyled>
                 <InfoWrapper>
-                    <TitleStyled>{title}</TitleStyled>
+                    <Link to="mock-me">
+                        <TitleStyled>{title}</TitleStyled>
+                    </Link>
                     <RatingStyled>{rating}</RatingStyled>
                 </InfoWrapper>
                 <GenreStyled>
@@ -26,6 +42,23 @@ export const KinoCard = ({ title, genre, imgSrc, rating, description }: KinoCard
                     ))}
                 </GenreStyled>
             </ContentStyled>
+            <HiddenContentStyled isShow={isShowInfo}>
+                <HiddenTopStyled>
+                    <CloseButtonStyled onClick={handleTransitionClick} />
+                    <FavoriteButton filmId={filmId} />
+                </HiddenTopStyled>
+                <InfoWrapper>
+                    <HiddenTitleStyled>{title}</HiddenTitleStyled>
+                    <RatingStyled>{rating}</RatingStyled>
+                </InfoWrapper>
+                <GenreStyled>
+                    {genre.map((item) => (
+                        <ItemStyled key={item}>{item}</ItemStyled>
+                    ))}
+                </GenreStyled>
+                <DescriptionStyled>{description}</DescriptionStyled>
+                <CustomLink href="mock-me">Смотреть</CustomLink>
+            </HiddenContentStyled>
         </KinoCardStyled>
     );
 };

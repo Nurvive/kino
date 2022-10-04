@@ -70,15 +70,6 @@ export const GenreStyled = styled.li`
     font-size: 14px;
 `;
 
-export const WatchLinkStyled = styled(Link)`
-    background-color: #0aaee4;
-    border-radius: 4px;
-    font-size: 20px;
-    padding: 10px 14px;
-    color: white;
-    transition: background-color 0.2s ease;
-`;
-
 export const InfoLinkStyled = styled(Link)`
     border-radius: 4px;
     font-size: 20px;

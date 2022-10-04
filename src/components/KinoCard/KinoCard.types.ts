@@ -4,4 +4,5 @@ export type KinoCardProps = {
     description: string;
     imgSrc: string;
     genre: string[];
+    filmId: number;
 };
