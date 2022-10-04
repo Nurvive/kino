@@ -9,20 +9,25 @@ import { Login } from './pages/Login';
 import { Registration } from './pages/Registration';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+    [
+        {
+            path: LANDING,
+            element: <Landing />,
+        },
+        {
+            path: SIGN_IN,
+            element: <Login />,
+        },
+        {
+            path: SIGN_UP,
+            element: <Registration />,
+        },
+    ],
     {
-        path: LANDING,
-        element: <Landing />,
+        basename: String(process.env.PUBLIC_URL),
     },
-    {
-        path: SIGN_IN,
-        element: <Login />,
-    },
-    {
-        path: SIGN_UP,
-        element: <Registration />,
-    },
-]);
+);
 
 root.render(
     <React.StrictMode>
