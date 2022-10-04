@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.71839c19.css",
-    "main.js": "/static/js/main.2f5de257.js",
-    "static/media/jungle.jpg": "/static/media/jungle.784ec8b835af9d0cfa41.jpg",
-    "static/media/Roboto-Italic.ttf": "/static/media/Roboto-Italic.87f3afe16a8c3c370634.ttf",
-    "static/media/Roboto-Medium.ttf": "/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
-    "static/media/Roboto-Thin.ttf": "/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
-    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
-    "static/media/Roboto-Black.ttf": "/static/media/Roboto-Black.cf56c1b149d0a5e8d7c6.ttf",
-    "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
-    "static/media/Roboto-Light.ttf": "/static/media/Roboto-Light.333da16a3f3cc391d087.ttf",
-    "static/media/defaultCardImage.jpeg": "/static/media/defaultCardImage.77c00a483a52b7a09307.jpeg",
-    "static/media/search.svg": "/static/media/search.efe6a04c6099f4e2bb6d0ca287356d5a.svg",
-    "index.html": "/index.html",
-    "main.71839c19.css.map": "/static/css/main.71839c19.css.map",
-    "main.2f5de257.js.map": "/static/js/main.2f5de257.js.map"
+    "main.css": "/kino/static/css/main.8e349a95.css",
+    "main.js": "/kino/static/js/main.cec3b821.js",
+    "static/media/jungle.jpg": "/kino/static/media/jungle.784ec8b835af9d0cfa41.jpg",
+    "static/media/Roboto-Italic.ttf": "/kino/static/media/Roboto-Italic.87f3afe16a8c3c370634.ttf",
+    "static/media/Roboto-Medium.ttf": "/kino/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
+    "static/media/Roboto-Thin.ttf": "/kino/static/media/Roboto-Thin.a732a12eb07742232407.ttf",
+    "static/media/Roboto-Regular.ttf": "/kino/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
+    "static/media/Roboto-Black.ttf": "/kino/static/media/Roboto-Black.cf56c1b149d0a5e8d7c6.ttf",
+    "static/media/Roboto-Bold.ttf": "/kino/static/media/Roboto-Bold.f80816a5455d171f948d.ttf",
+    "static/media/Roboto-Light.ttf": "/kino/static/media/Roboto-Light.333da16a3f3cc391d087.ttf",
+    "static/media/defaultCardImage.jpeg": "/kino/static/media/defaultCardImage.77c00a483a52b7a09307.jpeg",
+    "static/media/search.svg": "/kino/static/media/search.efe6a04c6099f4e2bb6d0ca287356d5a.svg",
+    "index.html": "/kino/index.html",
+    "main.8e349a95.css.map": "/kino/static/css/main.8e349a95.css.map",
+    "main.cec3b821.js.map": "/kino/static/js/main.cec3b821.js.map"
   },
   "entrypoints": [
-    "static/css/main.71839c19.css",
-    "static/js/main.2f5de257.js"
+    "static/css/main.8e349a95.css",
+    "static/js/main.cec3b821.js"
   ]
 }
