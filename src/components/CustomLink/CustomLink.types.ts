@@ -6,6 +6,7 @@ export enum CustomLinkStyles {
 
 export type CustomLinkProps = {
     href: string;
+    className?: string;
     children?: React.ReactNode;
     styles?: CustomLinkStyles;
 };

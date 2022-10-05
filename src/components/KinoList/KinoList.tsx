@@ -1,12 +1,12 @@
 import React from 'react';
-import { CardsWrapper, KinoListStyled } from './KinoList.style';
+import { CardsWrapper } from './KinoList.style';
 import { ListNav } from './ListNav';
 import { DEFAULT_CARDS } from './KinoList.constants';
 import { KinoCard } from 'src/components/KinoCard';
 
 export const KinoList = () => {
     return (
-        <KinoListStyled>
+        <div>
             <ListNav />
             <CardsWrapper>
                 {DEFAULT_CARDS.map((card) => (
@@ -21,6 +21,6 @@ export const KinoList = () => {
                     />
                 ))}
             </CardsWrapper>
-        </KinoListStyled>
+        </div>
     );
 };

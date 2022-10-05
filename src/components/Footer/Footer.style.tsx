@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mediaTablet } from 'src/constants/breakpoints';
 
 export const FooterStyled = styled.footer`
     display: flex;
@@ -11,6 +12,11 @@ export const InnerStyled = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    ${mediaTablet()} {
+        flex-direction: column;
+        gap: 20px;
+    }
 `;
 
 export const NavStyled = styled.nav``;
@@ -18,6 +24,10 @@ export const NavStyled = styled.nav``;
 export const LinksStyled = styled.ul`
     display: flex;
     gap: 16px;
+
+    ${mediaTablet()} {
+        flex-direction: column;
+    }
 `;
 
 export const LinkStyled = styled.li`

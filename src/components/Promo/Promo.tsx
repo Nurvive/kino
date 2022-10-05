@@ -2,19 +2,17 @@ import React from 'react';
 import { PromoProps } from './Promo.types';
 import { Carousel } from 'react-responsive-carousel';
 import {
-    BackImgStyled,
+    BackImgStyled, FavoriteButtonStyled,
     GenreListStyled,
-    GenreStyled,
+    GenreStyled, InfoLinkStyled,
     InnerStyled,
     LeftWrapperStyled,
     NameStyled,
     PromoStyled,
-    RightWrapperStyled,
+    RightWrapperStyled, WatchButtonStyled,
 } from './Promo.style';
-import { FavoriteButton } from '../FavoriteButton';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { RatingStars } from '../RatingStars';
-import { CustomLink } from '../CustomLink';
 import { CustomLinkStyles } from '../CustomLink/CustomLink.types';
 
 export const Promo = ({ content }: PromoProps) => {
@@ -35,11 +33,11 @@ export const Promo = ({ content }: PromoProps) => {
                                 <RatingStars rating={film.rating} />
                             </LeftWrapperStyled>
                             <RightWrapperStyled>
-                                <CustomLink href="mock-me">Смотреть</CustomLink>
-                                <CustomLink styles={CustomLinkStyles.OUTLINED} href={'mock-me'}>
+                                <WatchButtonStyled href="mock-me">Смотреть</WatchButtonStyled>
+                                <InfoLinkStyled styles={CustomLinkStyles.OUTLINED} href={'mock-me'}>
                                     Инфо о фильме
-                                </CustomLink>
-                                <FavoriteButton filmId={-1} />
+                                </InfoLinkStyled>
+                                <FavoriteButtonStyled filmId={-1} />
                             </RightWrapperStyled>
                         </InnerStyled>
                     );

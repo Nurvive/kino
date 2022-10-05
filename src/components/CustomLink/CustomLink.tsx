@@ -2,9 +2,9 @@ import React from 'react';
 import { CustomLinkProps } from './CustomLink.types';
 import { CustomLinkStyled } from './CustomLink.style';
 
-export const CustomLink = ({ href, children, styles }: CustomLinkProps) => {
+export const CustomLink = ({ href, children, styles, className }: CustomLinkProps) => {
     return (
-        <CustomLinkStyled styles={styles} to={href}>
+        <CustomLinkStyled className={className} styles={styles} to={href}>
             {children}
         </CustomLinkStyled>
     );

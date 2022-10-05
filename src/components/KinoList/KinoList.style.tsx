@@ -1,10 +1,13 @@
 import styled from 'styled-components';
-
-export const KinoListStyled = styled.div``;
+import { mediaOtherSize } from 'src/constants/breakpoints';
 
 export const CardsWrapper = styled.div`
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     padding: 15px 0;
+
+    ${mediaOtherSize(900)} {
+        justify-content: center;
+    }
 `;

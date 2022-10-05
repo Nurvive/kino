@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
+import { mediaOtherSize, mediaTablet } from 'src/constants/breakpoints';
+import { CustomLink } from '../CustomLink';
+import { FavoriteButton } from '../FavoriteButton';
 
 export const PromoStyled = styled.div`
     width: 100%;
@@ -25,7 +27,11 @@ export const InnerStyled = styled.div<{ bgi?: string }>`
                 url(${bgi});
             background-repeat: no-repeat;
             background-size: cover;
+            background-position: center;
         `}
+    ${mediaTablet()} {
+        min-height: 500px;
+    }
 `;
 
 export const BackImgStyled = styled.img`
@@ -39,6 +45,10 @@ export const LeftWrapperStyled = styled.div`
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    ${mediaTablet()} {
+        left: 30px;
+    }
 `;
 
 export const RightWrapperStyled = styled.div`
@@ -52,17 +62,32 @@ export const RightWrapperStyled = styled.div`
     & a {
         z-index: 3;
     }
+
+    ${mediaTablet()} {
+        flex-direction: column;
+        right: 30px;
+    }
 `;
 
 export const NameStyled = styled.p`
     color: white;
     font-size: 40px;
     text-transform: uppercase;
+    max-width: 300px;
+    text-align: left;
+
+    ${mediaTablet()} {
+        font-size: 28px;
+    }
 `;
 
 export const GenreListStyled = styled.ul`
     display: flex;
     gap: 25px;
+
+    ${mediaOtherSize(600)} {
+        display: none;
+    }
 `;
 
 export const GenreStyled = styled.li`
@@ -70,10 +95,30 @@ export const GenreStyled = styled.li`
     font-size: 14px;
 `;
 
-export const InfoLinkStyled = styled(Link)`
-    border-radius: 4px;
-    font-size: 20px;
-    padding: 9px 13px;
-    color: white;
-    border: 1px solid white;
+export const InfoLinkStyled = styled(CustomLink)`
+    ${mediaOtherSize(600)} {
+        font-size: 16px;
+        padding: 7px 11px;
+    }
+
+    ${mediaOtherSize(460)} {
+        display: none;
+    }
+`;
+
+export const WatchButtonStyled = styled(CustomLink)`
+    ${mediaOtherSize(600)} {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+`;
+
+export const FavoriteButtonStyled = styled(FavoriteButton)`
+    ${mediaOtherSize(600)} {
+        font-size: 16px;
+    }
+
+    ${mediaOtherSize(460)} {
+        display: none;
+    }
 `;

@@ -1,5 +1,13 @@
 import React from 'react';
+import { FormWrapperStyled, LayoutStyled } from './Login.style';
+import { Form } from 'src/components/Form';
 
 export const Login = () => {
-    return <div></div>;
+    return (
+        <LayoutStyled>
+            <FormWrapperStyled>
+                <Form title="Логин" />
+            </FormWrapperStyled>
+        </LayoutStyled>
+    );
 };

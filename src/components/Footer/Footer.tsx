@@ -10,7 +10,8 @@ import {
 } from './Footer.style';
 import { FOOTER_LINKS, FOOTER_SOCIALS } from './Footer.constants';
 import { Link } from 'react-router-dom';
-import { LANDING } from '../../constants/links';
+import { LANDING } from 'src/constants/links';
+import footerLogo from 'src/assets/img/footerLogo.png';
 
 export const Footer = () => {
     return (
@@ -26,7 +27,7 @@ export const Footer = () => {
                     </LinksStyled>
                 </NavStyled>
                 <Link to={LANDING}>
-                    <img src="/img/footerLogo.png" alt="logo" />
+                    <img src={footerLogo} alt="logo" />
                 </Link>
                 <SocialWrapperStyled>
                     {FOOTER_SOCIALS.map(({ img, link }) => (
