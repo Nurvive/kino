@@ -1,11 +1,9 @@
 import styled from 'styled-components';
 import { Layout } from 'src/components/Layout';
+import { pageContainer } from 'src/mixins';
 
 export const WrapperContent = styled.div`
-    max-width: 1280px;
-    margin: 0 auto;
-    width: 100%;
-    padding-inline: 20px;
+    ${pageContainer};
     padding-top: 35px;
 `;
 

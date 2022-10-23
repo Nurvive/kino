@@ -1,4 +1,4 @@
-import { SEARCH, SIGN_IN, SIGN_UP } from 'src/constants/links';
+import { SIGN_IN, SIGN_UP } from 'src/constants/links';
 import facebook from 'src/assets/img/socials/Facebook.png';
 import twitter from 'src/assets/img/socials/Twitter.png';
 import youtube from 'src/assets/img/socials/YouTube.png';
@@ -7,7 +7,6 @@ import instagram from 'src/assets/img/socials/Instagram.png';
 export const FOOTER_LINKS = [
     { text: 'Войти', link: SIGN_IN },
     { text: 'Зарегистрироваться', link: SIGN_UP },
-    { text: 'Поиск', link: SEARCH },
 ];
 
 export const FOOTER_SOCIALS = [

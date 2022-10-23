@@ -12,7 +12,7 @@ export const KinoCardStyled = styled.div`
 export const ImgWrapper = styled.div<{ imgSrc?: string }>`
     background-color: silver;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     height: 250px;
     background-position: center;
     border-top-left-radius: 5px;
@@ -38,6 +38,10 @@ export const TitleStyled = styled.p`
     font-weight: bold;
     font-size: 21px;
     color: black;
+    max-width: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 `;
 
 export const RatingStyled = styled.div`
@@ -45,16 +49,6 @@ export const RatingStyled = styled.div`
     border: 1px solid ${COLORS.Blue};
     padding: 3px 7px;
     border-radius: 4px;
-`;
-
-export const GenreStyled = styled.ul`
-    display: flex;
-    gap: 5px;
-`;
-
-export const ItemStyled = styled.li`
-    color: ${COLORS.Blue};
-    font-size: 12px;
 `;
 
 export const HiddenContentStyled = styled.div<{ isShow?: boolean }>`

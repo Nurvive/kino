@@ -3,23 +3,23 @@ import {
     CloseButtonStyled,
     ContentStyled,
     DescriptionStyled,
-    GenreStyled,
     HiddenContentStyled,
     HiddenTitleStyled,
     HiddenTopStyled,
     ImgWrapper,
     InfoWrapper,
-    ItemStyled,
     KinoCardStyled,
     RatingStyled,
     TitleStyled,
 } from './KinoCard.style';
 import { KinoCardProps } from './KinoCard.types';
-import { CustomLink } from '../CustomLink';
+import { CustomLink } from 'src/components/CustomLink';
 import { Link } from 'react-router-dom';
-import { FavoriteButton } from '../FavoriteButton';
+import { FavoriteButton } from 'src/components/FavoriteButton';
+import { Genres } from './Genres';
+import { FILM_PAGE } from 'src/constants/links';
 
-export const KinoCard = ({ title, genre, imgSrc, rating, description, filmId }: KinoCardProps) => {
+export const KinoCard = ({ title, genres, imgSrc, rating, description, filmId }: KinoCardProps) => {
     const [isShowInfo, setIsShowInfo] = useState(false);
 
     const handleTransitionClick = () => {
@@ -31,16 +31,12 @@ export const KinoCard = ({ title, genre, imgSrc, rating, description, filmId }: 
             <ImgWrapper onClick={handleTransitionClick} imgSrc={imgSrc} />
             <ContentStyled>
                 <InfoWrapper>
-                    <Link to="mock-me">
+                    <Link to={`${FILM_PAGE}/${filmId}`}>
                         <TitleStyled>{title}</TitleStyled>
                     </Link>
                     <RatingStyled>{rating}</RatingStyled>
                 </InfoWrapper>
-                <GenreStyled>
-                    {genre.map((item) => (
-                        <ItemStyled key={item}>{item}</ItemStyled>
-                    ))}
-                </GenreStyled>
+                <Genres genres={genres} />
             </ContentStyled>
             <HiddenContentStyled isShow={isShowInfo}>
                 <HiddenTopStyled>
@@ -51,13 +47,9 @@ export const KinoCard = ({ title, genre, imgSrc, rating, description, filmId }: 
                     <HiddenTitleStyled>{title}</HiddenTitleStyled>
                     <RatingStyled>{rating}</RatingStyled>
                 </InfoWrapper>
-                <GenreStyled>
-                    {genre.map((item) => (
-                        <ItemStyled key={item}>{item}</ItemStyled>
-                    ))}
-                </GenreStyled>
+                <Genres genres={genres} />
                 <DescriptionStyled>{description}</DescriptionStyled>
-                <CustomLink href="mock-me">Смотреть</CustomLink>
+                <CustomLink href={`${FILM_PAGE}/${filmId}`}>Смотреть</CustomLink>
             </HiddenContentStyled>
         </KinoCardStyled>
     );

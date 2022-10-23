@@ -1,43 +1,51 @@
-import React from 'react';
-import { PromoProps } from './Promo.types';
+import React, { useEffect } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import {
-    BackImgStyled, FavoriteButtonStyled,
+    BackImgStyled,
+    FavoriteButtonStyled,
     GenreListStyled,
-    GenreStyled, InfoLinkStyled,
+    GenreStyled,
     InnerStyled,
     LeftWrapperStyled,
     NameStyled,
     PromoStyled,
-    RightWrapperStyled, WatchButtonStyled,
+    RightWrapperStyled,
+    WatchButtonStyled,
 } from './Promo.style';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { RatingStars } from '../RatingStars';
-import { CustomLinkStyles } from '../CustomLink/CustomLink.types';
+import { RatingStars } from 'src/components/RatingStars';
+import { useAppDispatch, useAppSelector } from 'src/store';
+import { getPromoFilms } from 'src/store/films';
+import { FILM_PAGE } from 'src/constants/links';
 
-export const Promo = ({ content }: PromoProps) => {
+export const Promo = () => {
+    const dispatch = useAppDispatch();
+    const { promoItems } = useAppSelector((state) => state.films);
+
+    useEffect(() => {
+        void dispatch(getPromoFilms());
+    }, [dispatch]);
     return (
         <PromoStyled>
             <Carousel showThumbs={false} showArrows={false} animationHandler="fade" swipeable={false}>
-                {content.map((film) => {
+                {promoItems?.map((film) => {
                     return (
-                        <InnerStyled bgi={film.img} key={film.name}>
-                            <BackImgStyled src={film.img} />
+                        <InnerStyled bgi={film.posterUrl} key={film.kinopoiskId}>
+                            <BackImgStyled src={film.posterUrl} />
                             <LeftWrapperStyled>
-                                <NameStyled>{film.name}</NameStyled>
+                                <NameStyled>{film.nameRu}</NameStyled>
                                 <GenreListStyled>
-                                    {film.genre.map((item) => (
-                                        <GenreStyled key={item}>{item}</GenreStyled>
+                                    {film.genres.map(({ genre }) => (
+                                        <GenreStyled key={genre}>{genre}</GenreStyled>
                                     ))}
                                 </GenreListStyled>
-                                <RatingStars rating={film.rating} />
+                                <RatingStars rating={film.ratingKinopoisk} />
                             </LeftWrapperStyled>
                             <RightWrapperStyled>
-                                <WatchButtonStyled href="mock-me">Смотреть</WatchButtonStyled>
-                                <InfoLinkStyled styles={CustomLinkStyles.OUTLINED} href={'mock-me'}>
-                                    Инфо о фильме
-                                </InfoLinkStyled>
-                                <FavoriteButtonStyled filmId={-1} />
+                                <WatchButtonStyled href={`${FILM_PAGE}/${film.kinopoiskId}`}>
+                                    Смотреть
+                                </WatchButtonStyled>
+                                <FavoriteButtonStyled filmId={film.kinopoiskId} />
                             </RightWrapperStyled>
                         </InnerStyled>
                     );

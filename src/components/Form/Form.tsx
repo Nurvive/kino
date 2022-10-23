@@ -2,13 +2,13 @@ import React from 'react';
 import { FormStyled, InputStyled, LoginButtonStyled, TitleStyled } from './Form.style';
 import { FormProps } from './Form.types';
 
-export const Form = ({ title }: FormProps) => {
+export const Form = ({ title, onSubmit }: FormProps) => {
     return (
-        <FormStyled>
+        <FormStyled onSubmit={onSubmit}>
             <TitleStyled>{title}</TitleStyled>
-            <InputStyled />
-            <InputStyled />
-            <LoginButtonStyled href="mock-me">Войти</LoginButtonStyled>
+            <InputStyled name="email" />
+            <InputStyled name="password" />
+            <LoginButtonStyled type="submit">{title}</LoginButtonStyled>
         </FormStyled>
     );
 };

@@ -3,6 +3,6 @@ export type KinoCardProps = {
     title: string;
     description: string;
     imgSrc: string;
-    genre: string[];
+    genres: Array<{ genre: string }>;
     filmId: number;
 };

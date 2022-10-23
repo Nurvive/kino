@@ -19,6 +19,7 @@ export const InnerStyled = styled.div<{ bgi?: string }>`
     width: 100%;
     position: relative;
     z-index: 5;
+    max-height: 860px;
 
     ${({ bgi }) =>
         bgi &&
@@ -26,7 +27,7 @@ export const InnerStyled = styled.div<{ bgi?: string }>`
             background-image: linear-gradient(to bottom, black -15%, transparent 25%, transparent 65%, black 100%),
                 url(${bgi});
             background-repeat: no-repeat;
-            background-size: cover;
+            background-size: contain;
             background-position: center;
         `}
     ${mediaTablet()} {

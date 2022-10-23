@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { CustomLink } from '../CustomLink';
 
 export const FormStyled = styled.form`
     display: flex;
@@ -28,7 +27,14 @@ export const InputStyled = styled.input`
     }
 `;
 
-export const LoginButtonStyled = styled(CustomLink)`
+export const LoginButtonStyled = styled.button`
     max-width: 50%;
+    background-color: #0aaee4;
+    border-radius: 4px;
+    font-size: 20px;
+    padding: 10px 14px;
+    color: white;
+    cursor: pointer;
     text-align: center;
+    border: none;
 `;
