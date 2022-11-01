@@ -4,21 +4,25 @@ import { useAppDispatch, useAppSelector } from 'src/store';
 import { removeUser } from 'src/store/auth';
 import { useNavigate } from 'react-router';
 import { LANDING } from 'src/constants/links';
-import { getOneFilm } from 'src/store/films';
+import { getOneFilm, removeFavorites } from 'src/store/films';
 import { KinoCard } from 'src/components/KinoCard';
-import { CardsWrapper } from '../../components/FavoriteButton/FavoriteButton.style';
+import { CardsWrapper } from 'src/components/FavoriteButton/FavoriteButton.style';
 
 export const UserPage = () => {
     const dispatch = useAppDispatch();
     const { email, favorites } = useAppSelector((state) => state.auth);
     const { favoritesFilms } = useAppSelector((state) => state.films);
     const navigate = useNavigate();
+    console.log(favorites, favoritesFilms);
     const handleLogOutClick = useCallback(() => {
         void dispatch(removeUser());
+        dispatch(removeFavorites());
         navigate(LANDING);
     }, [dispatch, navigate]);
 
     useEffect(() => {
+        // dispatch(removeFavorites());
+
         favorites?.forEach((id) => {
             void dispatch(getOneFilm({ id: String(id), withPrevious: true }));
         });

@@ -17,6 +17,12 @@ const authSlice = createSlice({
             state.id = -1;
             state.favorites = [];
         },
+        updateFavoritesIds(state, { payload }) {
+            state.favorites = [...state.favorites, payload]
+        },
+        removeFavorites(state) {
+            state.favorites = [];
+        },
     },
     extraReducers: (builder) =>
         builder
@@ -40,5 +46,5 @@ const authSlice = createSlice({
                 state.favorites = action.payload.favorites;
             }),
 });
-export const { removeUser } = authSlice.actions;
+export const { removeUser, removeFavorites, updateFavoritesIds } = authSlice.actions;
 export default authSlice.reducer;

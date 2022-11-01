@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { mediaOtherSize } from '../../constants/breakpoints';
+import { mediaOtherSize } from 'src/constants/breakpoints';
 
 export const FavoriteButtonStyled = styled.div<{ isInFavorites?: boolean }>`
     color: white;

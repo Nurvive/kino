@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeaderStyled, LogoStyled, NavStyled } from './Header.style';
-import { LANDING, USER_PAGE } from 'src/constants/links';
+import { FAVORITES_PAGE, LANDING, USER_PAGE } from 'src/constants/links';
 import { Link } from 'react-router-dom';
 import logo from 'src/assets/img/logo.png';
 import { HeaderAuth } from './HeaderAuth';
@@ -15,6 +15,7 @@ export const Header = () => {
                 <LogoStyled src={logo} alt="logo" />
             </Link>
             <NavStyled>
+                {!email && <CustomLink href={FAVORITES_PAGE}>Избранное</CustomLink>}
                 {email ? (
                     <CustomLink href={USER_PAGE} styles={CustomLinkStyles.OUTLINED}>
                         {email}

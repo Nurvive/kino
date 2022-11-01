@@ -22,7 +22,8 @@ export type FilmState = Meta & {
     promoItems: Film[];
     loadingStatus: FetchStatus;
     oneFilm: Film;
-    favoritesFilms: Film[]
+    favoritesFilms: Film[];
+    unauthorizedFavoritesIds: number[];
 };
 
 export type getOneFilmArgs = {

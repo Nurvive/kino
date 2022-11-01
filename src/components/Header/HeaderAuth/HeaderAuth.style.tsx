@@ -5,16 +5,18 @@ import { CustomLink } from 'src/components/CustomLink';
 
 export const SignInStyled = styled(Link)`
     color: white;
-    font-size: 20px;
+    font-size: 16px;
 
     ${mediaTablet()} {
-        font-size: 16px;
+        font-size: 12px;
     }
 `;
 
 export const SignUpStyled = styled(CustomLink)`
+    font-size: 16px;
+
     ${mediaTablet()} {
-        font-size: 16px;
+        font-size: 12px;
         padding: 8px 10px;
     }
 `;

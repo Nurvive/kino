@@ -3,9 +3,10 @@ import { FormWrapperStyled, LayoutStyled } from './Registration.style';
 import { Form } from 'src/components/Form';
 import { useAppDispatch } from 'src/store';
 import { UserRegistration } from 'src/types';
-import { registration } from 'src/store/auth';
+import { registration, removeFavorites as userFavorites } from 'src/store/auth';
 import { USER_PAGE } from 'src/constants/links';
 import { useNavigate } from 'react-router';
+import { removeFavorites } from 'src/store/films';
 
 export const Registration = () => {
     const dispatch = useAppDispatch();
@@ -15,6 +16,8 @@ export const Registration = () => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget);
         const data = Object.fromEntries(formData) as UserRegistration;
+        dispatch(removeFavorites());
+        dispatch(userFavorites());
         void dispatch(registration(data));
         navigate(USER_PAGE);
     }, [dispatch, navigate]);

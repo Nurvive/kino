@@ -12,15 +12,19 @@ const initialState: FilmState = {
     total: 0,
     totalPages: 0,
     loadingStatus: FetchStatus.IDLE,
+    unauthorizedFavoritesIds: []
 };
 
 const filmsSlice = createSlice({
     name: 'films',
     initialState,
     reducers: {
-        updateFavoritesFilms(state, payload) {
-            state.favoritesFilms = state.favoritesFilms.filter((film) => film.kinopoiskId !== payload.payload);
+        updateFavoritesFilms(state, { payload }) {
+            state.favoritesFilms = state.favoritesFilms.filter((film) => film.kinopoiskId !== payload);
         },
+        removeFavorites(state) {
+            state.favoritesFilms = [];
+        }
     },
     extraReducers: (builder) =>
         builder
@@ -49,5 +53,5 @@ const filmsSlice = createSlice({
                 }
             }),
 });
-export const { updateFavoritesFilms } = filmsSlice.actions;
+export const { updateFavoritesFilms, removeFavorites } = filmsSlice.actions;
 export default filmsSlice.reducer;

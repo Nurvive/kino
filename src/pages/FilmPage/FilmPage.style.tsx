@@ -18,3 +18,14 @@ export const TitleStyled = styled.h1`
 export const PosterStyled = styled.img`
     max-height: 500px;
 `;
+
+export const CustomLinkStyled = styled.a`
+    margin-top: 20px;
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 20px;
+    padding: 10px 14px;
+    color: white;
+`;
